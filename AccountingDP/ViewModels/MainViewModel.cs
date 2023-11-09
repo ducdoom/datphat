@@ -26,7 +26,7 @@ namespace AccountingDP.ViewModels
             var result = AccountingContext.Users;
             object gg = Services.VietseaService.getNXT(DateTime.Now);
             var t = gg.GetType();
-            string a = "";
+            string a = " ";
         }
     }
 }
