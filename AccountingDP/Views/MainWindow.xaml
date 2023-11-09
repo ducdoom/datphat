@@ -1,0 +1,34 @@
+﻿<Window
+    x:Class="AccountingDP.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:AccountingDP"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:AccountingDP.ViewModels"
+    Title="AccountingDP"
+    Width="800"
+    Height="450"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+
+    <Window.DataContext>
+        <viewModels:MainViewModel />
+    </Window.DataContext>
+
+
+    <Grid>
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>-->
+
+        <TabControl TabStripPlacement="Left">
+            <TabItem Header="Báo cáo">
+                <Button Command="{Binding TestEFCommand}" Content="Test Dapper" />
+            </TabItem>
+            <TabItem Header="Xuất hàng" />
+            <TabItem Header="Nhập hàng" />
+        </TabControl>
+    </Grid>
+</Window>
